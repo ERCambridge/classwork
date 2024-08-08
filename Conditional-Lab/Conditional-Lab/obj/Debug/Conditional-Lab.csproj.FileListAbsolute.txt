@@ -1,0 +1,7 @@
+C:\Users\Ethan\workspace\classwork\Conditional-Lab\Conditional-Lab\bin\Debug\Conditional-Lab.exe.config
+C:\Users\Ethan\workspace\classwork\Conditional-Lab\Conditional-Lab\bin\Debug\Conditional-Lab.exe
+C:\Users\Ethan\workspace\classwork\Conditional-Lab\Conditional-Lab\bin\Debug\Conditional-Lab.pdb
+C:\Users\Ethan\workspace\classwork\Conditional-Lab\Conditional-Lab\obj\Debug\Conditional-Lab.csproj.AssemblyReference.cache
+C:\Users\Ethan\workspace\classwork\Conditional-Lab\Conditional-Lab\obj\Debug\Conditional-Lab.csproj.CoreCompileInputs.cache
+C:\Users\Ethan\workspace\classwork\Conditional-Lab\Conditional-Lab\obj\Debug\Conditional-Lab.exe
+C:\Users\Ethan\workspace\classwork\Conditional-Lab\Conditional-Lab\obj\Debug\Conditional-Lab.pdb
