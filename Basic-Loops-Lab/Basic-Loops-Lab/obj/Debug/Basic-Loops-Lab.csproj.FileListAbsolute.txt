@@ -1,0 +1,7 @@
+C:\Users\Ethan\workspace\classwork\Basic-Loops-Lab\Basic-Loops-Lab\bin\Debug\Basic-Loops-Lab.exe.config
+C:\Users\Ethan\workspace\classwork\Basic-Loops-Lab\Basic-Loops-Lab\bin\Debug\Basic-Loops-Lab.exe
+C:\Users\Ethan\workspace\classwork\Basic-Loops-Lab\Basic-Loops-Lab\bin\Debug\Basic-Loops-Lab.pdb
+C:\Users\Ethan\workspace\classwork\Basic-Loops-Lab\Basic-Loops-Lab\obj\Debug\Basic-Loops-Lab.csproj.AssemblyReference.cache
+C:\Users\Ethan\workspace\classwork\Basic-Loops-Lab\Basic-Loops-Lab\obj\Debug\Basic-Loops-Lab.csproj.CoreCompileInputs.cache
+C:\Users\Ethan\workspace\classwork\Basic-Loops-Lab\Basic-Loops-Lab\obj\Debug\Basic-Loops-Lab.exe
+C:\Users\Ethan\workspace\classwork\Basic-Loops-Lab\Basic-Loops-Lab\obj\Debug\Basic-Loops-Lab.pdb
