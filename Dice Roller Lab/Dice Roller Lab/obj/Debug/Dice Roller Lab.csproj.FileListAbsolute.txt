@@ -1,0 +1,7 @@
+C:\Users\Ethan\workspace\classwork\Dice Roller Lab\Dice Roller Lab\obj\Debug\Dice Roller Lab.csproj.AssemblyReference.cache
+C:\Users\Ethan\workspace\classwork\Dice Roller Lab\Dice Roller Lab\obj\Debug\Dice Roller Lab.csproj.CoreCompileInputs.cache
+C:\Users\Ethan\workspace\classwork\Dice Roller Lab\Dice Roller Lab\bin\Debug\Dice Roller Lab.exe.config
+C:\Users\Ethan\workspace\classwork\Dice Roller Lab\Dice Roller Lab\bin\Debug\Dice Roller Lab.exe
+C:\Users\Ethan\workspace\classwork\Dice Roller Lab\Dice Roller Lab\bin\Debug\Dice Roller Lab.pdb
+C:\Users\Ethan\workspace\classwork\Dice Roller Lab\Dice Roller Lab\obj\Debug\Dice Roller Lab.exe
+C:\Users\Ethan\workspace\classwork\Dice Roller Lab\Dice Roller Lab\obj\Debug\Dice Roller Lab.pdb
