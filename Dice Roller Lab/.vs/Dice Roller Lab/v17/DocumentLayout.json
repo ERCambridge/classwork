@@ -18,7 +18,7 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Dice Roller Lab\\Program.cs",
               "ToolTip": "C:\\Users\\Ethan\\workspace\\classwork\\Dice Roller Lab\\Dice Roller Lab\\Program.cs",
               "RelativeToolTip": "Dice Roller Lab\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAeAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T01:42:09.259Z",
               "EditorCaption": ""

@@ -18,7 +18,7 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Basic-Loops-Lab\\Program.cs",
               "ToolTip": "C:\\Users\\Ethan\\workspace\\classwork\\Basic-Loops-Lab\\Basic-Loops-Lab\\Program.cs",
               "RelativeToolTip": "Basic-Loops-Lab\\Program.cs",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAgwHcAAAAAAAAA",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwHcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T22:25:40.549Z",
               "EditorCaption": ""
