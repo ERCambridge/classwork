@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Day_5_Array_Example
+namespace Day_7_Array_Example
 {
     internal class Program
     {
@@ -19,14 +19,49 @@ namespace Day_5_Array_Example
             Console.WriteLine("\nWelcome to my app!");       // Verify the app started
 
             // Set up a loop to get 5 numbers, one at a time
-            for (int i = 0; i < 5; i++)
-            {
-                // Call the method to get a numeric value
-                double aValue = GetANumber();
+            const int ARRAY_SIZE = 10;
 
+            double[] theNumbers = new double[ARRAY_SIZE];
+
+
+            double theSum = 0;
+
+            int numberEntered = 0;
+
+            for (int i = 0; i < ARRAY_SIZE; i++)
+            {
+
+              
+
+               
+
+                if (!moreInput()) 
+                {
+                    break;
+                }
+
+
+                // Call the method to get a numeric value
+                theNumbers[i] = GetANumber();
+                numberEntered++;
+   
                 // Display the value we got from the method
-                Console.WriteLine("Number entered was: " + aValue);
+                //Console.WriteLine("Number entered was: " + theNumbers[i]);
             }
+
+            Console.WriteLine($"So I recieved {numberEntered} numbers from you");
+
+            for (int i = 0; i < numberEntered; i++) 
+            { 
+                Console.WriteLine($"Element #:{i} is: {theNumbers[i]}" +
+                    $"it is {(theNumbers[i]%2 == 0 ? "Even" : "Odd")}");
+                theSum += theNumbers[i];
+
+            }
+
+            Console.WriteLine($"The sum of all the numbers is: {theSum}\nThe Average of all the numbers is: {theSum/numberEntered}");
+
+
             Console.WriteLine("\nThanks for using my app!"); // Verify the app ended
 
             Console.WriteLine("\nPress enter to end program...");
@@ -41,6 +76,45 @@ namespace Day_5_Array_Example
         // This method will get a numeric value from the user
         // It must be static because it will be used by the static method Main() (more later)
         // this method receives no parameters and returns a double (a double can also hold an int value)
+       
+        static bool moreInput() 
+        {   
+            bool isThereInput = false;
+
+            string whatUserTyped = "";
+
+            bool getInput = true;
+
+            do 
+            { 
+                Console.WriteLine("Do you have any numbers to enter? (Y/N)");
+                whatUserTyped = Console.ReadLine();
+
+                whatUserTyped = whatUserTyped.ToUpper();
+
+                string firstChar = whatUserTyped.Substring(0, 1);
+
+                if (firstChar == "Y")
+                {
+                    getInput = false;
+                    isThereInput = true;
+                }
+                else
+                {
+                    if (firstChar == "N")
+                    {
+                        getInput = false;
+                        isThereInput = false;
+                    }
+                }
+            }while
+            (getInput);
+
+            return isThereInput;
+
+        }
+        
+        
         static double GetANumber()
         {
             // define a variable for the return value

@@ -15,7 +15,23 @@ namespace My_Method_Examples
                 Console.WriteLine($"Number entered was: {aValue}");
 
             }
+
+            double someValue = 0;
+            string someString = "";
+            getANumAndString( out someValue, out someString );  
+            Console.WriteLine($"Hey {someString} you entered the number {someValue}");
+
             Console.WriteLine("Thanks for using the program");
+        }
+
+
+        static void getANumAndString(out double aNum, out string aName) 
+        {
+
+            aNum = getANumber();
+            Console.WriteLine("Please enter your name:");
+            aName = Console.ReadLine();
+                    
         }
 
         static double getANumber()
