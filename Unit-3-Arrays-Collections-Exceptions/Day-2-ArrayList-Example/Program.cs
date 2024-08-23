@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Day_2_ArrayList_Example
 {
@@ -6,7 +8,36 @@ namespace Day_2_ArrayList_Example
     {
         static void Main(string[] args)
         {
+            ArrayList someNumbers = new ArrayList();
 
+            do
+            {
+                someNumbers.Add(GetANumber());
+            } while (moreInput());
+
+            Console.WriteLine($"You entered {someNumbers.Count} numbers");
+            Console.Write("\nThe numbers you entered were: ");
+
+            foreach (double aNumber in someNumbers) 
+            { 
+                Console.Write($"{aNumber}, ");
+            }
+
+
+            List<double> someNumbersList = new List<double>();
+
+            do
+            {
+                someNumbersList.Add(GetANumber());
+            } while (moreInput());
+
+            Console.WriteLine($"You entered {someNumbersList.Count} numbers");
+            Console.Write("\nThe numbers you entered were: ");
+
+            foreach (double aNumber in someNumbersList)
+            {
+                Console.Write($"{aNumber}, ");
+            }
 
         }  // End of Main()
 

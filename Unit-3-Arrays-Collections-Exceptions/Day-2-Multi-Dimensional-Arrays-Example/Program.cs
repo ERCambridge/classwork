@@ -20,18 +20,18 @@ namespace Day_2_Multi_Dimensional_Arrays_Example
                 }
             }
 
-            for (int i = 0; i < bowlers.GetLength(0); i++)
+            for (int bowlerNumber = 0; bowlerNumber < bowlers.GetLength(0); bowlerNumber++)
             {
-                    Console.Write("\nBowler #" + (i+1) + " scores: ");
+                    Console.Write("\nBowler #" + (bowlerNumber + 1) + " scores: ");
 
-                    for (int j = 0; j < bowlers.GetLength(1); j++)
+                    for (int scoreNumber = 0; scoreNumber < bowlers.GetLength(1); scoreNumber++)
                     {
-                        Console.Write(bowlers[i,j] + " ");
+                        Console.Write(bowlers[bowlerNumber, scoreNumber] + " ");
                     }
 
-                    Console.Write("  Total Score: " + sumScores(bowlers, i));
+                    Console.Write("  Total Score: " + sumScores(bowlers, bowlerNumber));
 
-                    Console.Write("  Average: " + sumScores(bowlers, i) / bowlers.GetLength(1));
+                    Console.Write("  Average: " + sumScores(bowlers, bowlerNumber) / bowlers.GetLength(1));
 
             }
 
