@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Day_4_Linq_Lambda_Expressions_Example
 {
@@ -32,18 +33,55 @@ namespace Day_4_Linq_Lambda_Expressions_Example
                 Console.Write("\nEnter value to search for: ");
                 string searchString = Console.ReadLine();
 
-                int matchCount = 0;
-                foreach (string anEntry in starFleetPersonnel)
-                {
-                    if (anEntry.ToLower().Contains(searchString.ToLower()))
-                    {
-                        matchCount++;
-                        DisplayLine(anEntry);
-                    }
+                //int matchCount = 0;
+                //foreach (string anEntry in starFleetPersonnel)
+                //{
+                //    if (anEntry.ToLower().Contains(searchString.ToLower()))
+                //    {
+                //        matchCount++;
+                //        DisplayLine(anEntry);
+                //    }
+                //}
+
+                int[] nums = {1,2,3,4 };
+
+                
+
+                var matchingEntries = starFleetPersonnel.Where(anEntry => anEntry.ToLower().Contains(searchString.ToLower()));
+
+
+
+                Console.WriteLine("\n" + matchingEntries.Count() + " entries found matching \'" + searchString + "\'");
+
+                foreach (string aPerson in matchingEntries) 
+                { 
+                    DisplayLine(aPerson);
                 }
 
-                Console.WriteLine("\n" + matchCount + " entries found matching \'" + searchString + "\'");
             }
+
+            //Console.Write("\nEnter value to search for: ");
+
+            //string whatTheyWant = Console.ReadLine();
+            //var theFirstOne = starFleetPersonnel.FirstOrDefault(aLine => aLine.ToLower().Contains(whatTheyWant.ToLower()));
+
+            //Console.WriteLine($"\nThe first occurrence of {whatTheyWant} is in: " + ((theFirstOne != null) ? theFirstOne : "None"));
+
+            Console.Write("\nEnter value to search for: ");
+
+            string uniqueSearch = Console.ReadLine();
+            try
+            {
+                var theOnlyOne = starFleetPersonnel.SingleOrDefault(aLine => aLine.ToLower().Contains(uniqueSearch.ToLower()));
+                Console.WriteLine($"\nThe occurrence of {uniqueSearch} is unique to: " + ((theOnlyOne != null) ? theOnlyOne : "not found"));
+            }
+            catch (Exception exceptionInfo) 
+            {
+                Console.WriteLine($"\nThe occurrence of {uniqueSearch} is not unique");
+            }
+           
+
+
 
             Console.WriteLine("\nThanks for trying out the Linq/Lambda Expression Demo");
             PauseProgram();
@@ -57,7 +95,7 @@ namespace Day_4_Linq_Lambda_Expressions_Example
         {
             starFleetPersonnel.Add("James T Kirk, Captain, NCC-1701");
             starFleetPersonnel.Add("Jean Luc Picard, Captain, NCC-1701-D");
-            starFleetPersonnel.Add("Jonathan Archer, Captain, NX-1");
+            starFleetPersonnel.Add("Jonathan Archer, Captain, NX-01");
             starFleetPersonnel.Add("Catherine Janeway, Captain, NCC-74656");
             starFleetPersonnel.Add("Benjamin Sisco, Captain, DS9");
             starFleetPersonnel.Add("Worf Son of Mogh, Lieutenant, NCC-1701-D");
