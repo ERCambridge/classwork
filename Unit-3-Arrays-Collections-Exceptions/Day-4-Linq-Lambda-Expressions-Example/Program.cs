@@ -79,8 +79,13 @@ namespace Day_4_Linq_Lambda_Expressions_Example
             {
                 Console.WriteLine($"\nThe occurrence of {uniqueSearch} is not unique");
             }
-           
 
+            var sortedList = starFleetPersonnel.OrderBy(aLine => aLine);
+
+            foreach (string aLine in sortedList) 
+            { 
+                Console.WriteLine(aLine);
+            }
 
 
             Console.WriteLine("\nThanks for trying out the Linq/Lambda Expression Demo");
