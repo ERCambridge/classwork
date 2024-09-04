@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
+// Using programmer defined code
+// The code is in files incldued in the project folder
+
+//Using namespace
 using GeneralPurposeFunctions;
 using StarTrekStuff;
 
@@ -14,18 +19,30 @@ namespace Day_1_Linq_with_Classes
         //      (instead of passing as a parameter to methods that need access to it)
         // It must be made static because it's used in static methods like Main()
 
-        static CommonlyUsedFunctions commonCode = new CommonlyUsedFunctions();
 
+        // Give me an object containing the CommonlyUsedFunctions
+        // Objects are needed to perform object oriented programming
+        // Use an object to access methods defined in the class for the object
+
+        //     data-type             name         new data-type()
+        static CommonlyUsedFunctions commonCode = new CommonlyUsedFunctions(); // run 0-arg constructor
+
+        // Give me a list of StarFleetPersonnel objects
         static List<StarFleetPersonnel> castOfPeople = new List<StarFleetPersonnel>();
+
+        // Define an array of StarFleetPersonnel
+
+        static StarFleetPersonnel[] starTrekFolks = new StarFleetPersonnel[5];
 
         static void Main(string[] args)
         {
 
             Console.WriteLine("Welcome to the Linq/Lambda Expression Demo");
 
-            // Call a method to load the List that holding our data
+            // Call a method to load the List that's holding our data
             LoadData();
 
+            // Using the CommonlyUsedFunctions object to access a method in it's class
             commonCode.WriteSeparatorLine("List of People in our List");
 
             foreach (StarFleetPersonnel aPerson in castOfPeople)
@@ -62,11 +79,17 @@ namespace Day_1_Linq_with_Classes
                 //
                 // Note use of var type to hold the result of .Where()
 
+                // Use an Object Reference to access things in an object
+
+                // Reference Object: objectName.something-in-the-object (method or data-name)
+
+                //anEntry is a StarFleetPersonnel object
+                // name is a variable defined in that StarFleetPersonnel object
                 var matchingEntries =
                     castOfPeople.Where(anEntry => anEntry.name.ToLower().Contains(searchString.ToLower()));
 
                 // At this point the matchingEntries variable hold all List entries that match the condition
-
+              // object.method()
                 Console.WriteLine(("\n" + matchingEntries.Count()) + " entries found matching \'" + searchString +
                                   "\'");
 
@@ -97,6 +120,9 @@ namespace Day_1_Linq_with_Classes
          ************************************************************************************/
         static void LoadData()
         {
+
+            // Use the List of StarFleetPersonnel object to add people to the List 
+            // Using the 3-arg constructor
             castOfPeople.Add(new StarFleetPersonnel("James T Kirk", "Captain", "NCC-1701"));
             castOfPeople.Add(new StarFleetPersonnel("Jean Luc Picard", "Captain", "NCC-1701-D"));
             castOfPeople.Add(new StarFleetPersonnel("Jonathan Archer", "Captain", "NX-01"));
