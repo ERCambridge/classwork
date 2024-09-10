@@ -1,4 +1,5 @@
-﻿using GeneralPurposeFunctions;
+﻿using Day_3_Iinheritance;
+using GeneralPurposeFunctions;
 using System;
 
 
@@ -48,6 +49,25 @@ namespace Day_3_Inheritance
             newCard.CardValue = 2;       // Use property to change the value
             Console.WriteLine($"newCard is: {newCard}");
             Console.WriteLine($"  aCard is: {aCard}");
+
+            // Inheritance usage starts here
+            myFuncs.WriteSeparatorLine("Instantiate an AmericanPlayingCard and display it");
+
+            //Instansiate a subclass object using the subclass ctor
+            AmericanPlayingCard theCard = new AmericanPlayingCard(10, "Spades", "Black");
+            Console.WriteLine($"theCard: {theCard}");
+
+            AmericanPlayingCard theCard2 = new AmericanPlayingCard(10, "Spades", "Black");
+
+            // This will use the PlayingCArd .Equals() method
+            if (theCard.Equals(theCard2)) 
+            {
+                Console.WriteLine("They ARE equal");
+            }
+            else
+            {
+                Console.WriteLine("They ARE NOT equal");
+            }
 
             myFuncs.WriteSeparatorLine("Thanks for trying out our first OOP application!");
             myFuncs.PauseProgram();
