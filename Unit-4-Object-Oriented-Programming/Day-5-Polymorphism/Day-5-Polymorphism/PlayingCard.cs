@@ -154,6 +154,7 @@ namespace Day_5_Polymorphism
             return CardValue * 17 + CardColor.GetHashCode() + CardSuit.GetHashCode();
         }
 
+        // virtual indicates a Polymorphic method overriden by a subclass 
         public virtual void ShowCard()
         {
             Console.WriteLine(this);

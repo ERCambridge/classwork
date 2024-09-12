@@ -77,6 +77,7 @@ namespace Day_5_Polymorphism
 
             italianCard1.ShowCard();
             italianCard2.ShowCard();
+            italianCard3.ShowCard();
 
             myFuncs.WriteSeparatorLine("Compare the ItalianPlayingCard objects to see if equal");
 
@@ -156,7 +157,7 @@ namespace Day_5_Polymorphism
         {
             myFuncs.WriteSeparatorLine("------ DisplayIfCardsAreEqual(PlayingCard card1, PlayingCard card2) method");
             Console.WriteLine($"Comparing a {card1.GetType()} to a {card2.GetType()}");
-            Console.Write($"A {card1.CardColor} {card2.CardValue} of {card1.CardSuit} ");
+            Console.Write($"A {card1.CardColor} {card1.CardValue} of {card1.CardSuit} ");
             Console.Write($"{(card1.Equals(card2) ? "is EQUAL" : "is NOT equal")} to ");
             Console.WriteLine($"a {card2.CardColor} {card2.CardValue} of {card2.CardSuit} \n");
         }
