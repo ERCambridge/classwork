@@ -8,7 +8,11 @@ namespace Day_6_Abstract_Classes
     // It's in the same namespace as the application (for now and for simplicity)
     //
 
-    public class PlayingCard
+    // Made class abstract because in reality there are no generic PlayingCard objects
+    // Any PlayingCard has additional characteristics depending on it's use
+
+    // Since this is now an abstract class, objects cannot be instantiated using the class
+    public abstract class PlayingCard
     {
     /*********************************************************************
      * Data members (attributes, properties, variables)
@@ -154,10 +158,12 @@ namespace Day_6_Abstract_Classes
             return CardValue * 17 + CardColor.GetHashCode() + CardSuit.GetHashCode();
         }
 
-        public virtual void ShowCard()
-        {
-            Console.WriteLine(this);
-        }
+        // to make an abstract method add the abstract keyword and code ; after the method signature
+        // abstract methods have no body/processing because there can never be an object to process
+
+        //public virtual void ShowCard(){} // virtual allowed Polymorphism to be used in the inheritance hierarchy 
+        public abstract void ShowCard();  // abstract indicates the subclass MUST override this method and still allows Polymorphism 
+
 
     }  // End of PlayingCard class
 } // End of namespace

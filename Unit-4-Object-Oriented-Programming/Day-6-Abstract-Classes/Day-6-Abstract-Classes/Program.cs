@@ -11,6 +11,7 @@ namespace Day_6_Abstract_Classes
         {
             commonCode.WriteSeparatorLine("Welcome to the Abstract Class Example!");
 
+         // Because PlayingCard is an abstract class, it can't be instantiated as an object
      //     PlayingCard aCard = new PlayingCard(1, "Hearts", "Red");
             
             AmericanPlayingCard usaCard       = new AmericanPlayingCard(1, "Hearts");

@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="AmericanPlayingCard.cs" />
     <Compile Include="CardDeck.cs" />
+    <Compile Include="PokerHand.cs" />
     <Compile Include="GeneralPurposeFunctions.cs" />
+    <Compile Include="ICardHand.cs" />
     <Compile Include="PlayingCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

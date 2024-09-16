@@ -11,9 +11,30 @@ namespace Day_6_Interfaces
         static void Main(string[] args)
         {
             generalFuncs.WriteSeparatorLine("Welcome to our Deck of Cards Example!");
-            
+
             generalFuncs.WriteSeparatorLine("Instantiating and displaying a deck of cards without Jokers");
             CardDeck deckOfCards = new CardDeck();
+            deckOfCards.Shuffle();
+
+            PokerHand aPokerHand = new PokerHand();
+
+            for (int i = 0;i < PokerHand.NUMBER_CARDS_IN_HAND; i++)
+            {
+                aPokerHand.AddCard(deckOfCards.DealACard());
+            }
+            aPokerHand.AddCard(new AmericanPlayingCard(13, "Spades"));
+
+           aPokerHand.ShowHand();
+
+            generalFuncs.WriteSeparatorLine("Remove 3rd card and add king of spades");
+            aPokerHand.RemoveCard(aPokerHand.GetCardAtPosition(3));
+            aPokerHand.AddCard(new AmericanPlayingCard(13, "Spades"));
+
+            aPokerHand.ShowHand();
+
+            generalFuncs.PauseProgram();         
+            aPokerHand.ThrowInHand();
+        
             deckOfCards.ShowDeck();
             deckOfCards.Count();
 
