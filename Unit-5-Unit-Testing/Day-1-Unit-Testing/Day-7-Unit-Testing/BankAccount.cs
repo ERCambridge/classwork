@@ -79,6 +79,8 @@ namespace Day_7_Unit_Testing
                 startingBalance = 0;
 
             }
+            // this. represents the current object (object being initialized)
+            // this. is only required when a name is defined more than once (usually when a parameter has the same name as a variable or property)
             this.accountOwner = accountOwner;
             this.balance = startingBalance;
             this.AccountNumber = newAccountNumberGenerator.Next(1000000, 9999999).ToString();

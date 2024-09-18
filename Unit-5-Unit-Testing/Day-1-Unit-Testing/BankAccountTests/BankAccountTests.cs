@@ -102,6 +102,8 @@ namespace BankAccountTests
 
             BankAccount testAccount = new BankAccount(testAcctOwner, testValidStartingBalance);
 
+            testAccount.Withdraw(60);
+
             Assert.Equal(testAccount.Balance, testValidStartingBalance);
         }
 

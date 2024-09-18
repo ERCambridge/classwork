@@ -17,8 +17,17 @@ namespace Day_7_Enums
 
         /*************************************************************************************
          * Enumerated Types for class
+         * 
+         * Assign words to represent values to assist coding and data validation
          *
          * Assign words to represent value to assist coding and data validation
+         * 
+         * Internally enums ar assigned integer values starting at  0
+         * 
+         * Enums ar typically defined as public so applications can use them (ok they are const)
+         * 
+         * Accessing an enum: className.enumName
+         *                    enumName.enumValue
          ************************************************************************************/
 
         public enum ValidCardSuits
@@ -50,8 +59,8 @@ namespace Day_7_Enums
 
         public enum ValidCardColors
         {
-            Black,
-            Red
+            Black =6,
+            Red = 1
         };
         
         /*************************************************************************************
