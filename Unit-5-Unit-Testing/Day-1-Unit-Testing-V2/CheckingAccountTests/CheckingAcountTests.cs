@@ -47,5 +47,36 @@ namespace CheckingAccountTests
             //          is the balance -100
             Assert.Equal(-100, testAccount.Balance);
         }
+
+
+        [Fact]
+        public void Withdrawal_Over_Allowed_Overdraft_Amount ()
+        {
+            //Arrange
+            double startBalance = 0;
+
+            CheckingAccount testAccount = new CheckingAccount ("Ryan", startBalance);
+
+            //Act
+            testAccount.Withdraw(100);
+
+            //Assert
+            Assert.Equal(startBalance,testAccount.Balance);
+        }
+
+        [Fact]
+        public void Withdrawal_Of_Allowed_Amount_Without_Overdraft()
+        {
+            //Arrange
+            double startBalance = 100;
+
+            CheckingAccount testAccount = new CheckingAccount("Jay", startBalance);
+
+            //Act 
+            testAccount.Withdraw(100);
+
+            //Assert
+            Assert.Equal(0, testAccount.Balance);
+        }
     }
 }
