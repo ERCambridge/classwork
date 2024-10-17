@@ -1,0 +1,41 @@
+/* this a comment in CSS */
+/* define formatting rules for a web page */
+/* general format: selector{ 
+                                css rules
+                            }
+*/
+html{
+    font-size: 20pt;
+    color: rgb(255, 102, 0);
+}
+h2{
+    color: rgb(63, 142, 231);
+}
+
+#mainDiv{
+    color: rgb(95, 158, 95);
+    background-color: bisque;
+}
+
+#sectionDiv{
+    background-color:chartreuse;
+    color: black;
+}
+
+#secondLine {
+    color:hotpink
+}
+
+span{
+    color:blueviolet;
+    font-weight: bold;
+}
+
+.student{
+    color:cadetblue;
+    font-style: italic;
+}
+
+.admin{
+    color:darkgoldenrod;
+}
