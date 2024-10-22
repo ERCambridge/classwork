@@ -14,19 +14,19 @@
 <!DOCTYPE html>    <!-- tells the browser the file contains html - optional                     -->
 <html lang="en">   <!-- the container of all the html for the page and the language of the page -->
     <head> <!-- Information browser needs to know about the html - NOT displayed   -->
-         <meta charset="UTF-8">    <!-- character set for the page -->
-         <!-- viewport is the displayable part of browser screen -->
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <!-- Tell the browser we want to use an file containing CSS -->
+        <meta charset="UTF-8">    <!-- character set for the page -->
+        <!-- viewport is the displayable part of browser screen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Tell the browser we want to use an file containing CSS -->
 
-         <!-- the link tag connect the html with external files you want the browser to use -->
-         <!-- rel="" indicates its a stylesheet (type of file) --> 
-         <!-- href="" is the path  to the external file        --> 
-         <!-- the path is relative to the project folder       -->
-         <!-- Note the use of the shorthand end tag - / at the end of the line (before the >)--> 
-         <link rel="stylesheet", href="myStyles.css"/> 
+        <!-- the link tag connect the html with external files you want the browser to use -->
+        <!-- rel="" indicates its a stylesheet (type of file) --> 
+        <!-- href="" is the path  to the external file        --> 
+        <!-- the path is relative to the project folder       -->
+        <!-- Note the use of the shorthand end tag - / at the end of the line (before the >)--> 
+        <link rel="stylesheet", href="myStyles.css"/> 
 
-         <title>Frank's Page</title> <!-- words display in the browser tab for the page -->
+        <title>Ethan's Page</title> <!-- words display in the browser tab for the page -->
     </head>
     <body> <!-- Container for the primary content of the page - What is displayed in the browser-->
         <header> <!-- Put stuff you want at the top of page here-->
@@ -37,7 +37,8 @@
             <h2>Starting August 1, 2024</h2>
         </header>
         <nav> <!-- put links a user can jump to (another page or within this page) -->
-            <!-- no nav section content-->
+            <!-- Use "a" tag with the href="" attribute to link other page/site-->
+             <a href="contactInfo.html">Enter Contact Info</a>
         </nav>
         <main> <!-- this should convey the main content of the page--> 
             <!-- the paragraph-tag is used to start things on a new line -->
@@ -69,6 +70,27 @@
                     <li class="admin">Frank</li>
                 </ol>
             </section>
+
+            <section>
+                <table> 
+                    <tr> 
+                        <th>Header 1</th> 
+                        <th>Header 2</th> 
+                        <th>Header 3</th> 
+                    </tr> 
+                    <tr> 
+                        <td>Cell 1</td> 
+                        <td>Cell 2</td> 
+                        <td>Cell 3</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Cell 4</td> 
+                        <td>Cell 5</td> 
+                        <td>Cell 6</td> 
+                    </tr> 
+                </table>
+            </section>
+
         </main>
         <footer> <!-- stuff you want at the bottom of the page -->
             Copyright 2024 BootCamps R Us, LLC

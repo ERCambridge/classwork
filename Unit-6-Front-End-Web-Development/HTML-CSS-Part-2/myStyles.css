@@ -10,7 +10,7 @@ html { /* style all the elements withing the html tag */
     color: blue;
 }
 h2 { /* style all h2 elements */
- color:blueviolet;
+    color:blueviolet;
 }
 div { /* style all div and elements withing them */
     background-color: cornflowerblue;
@@ -31,9 +31,29 @@ color:chocolate;
 font-style: italic;
 }
 .admin {
- color: purple;
- width: 3em;
- border-style:groove;
- border-color: aqua;
- border-width: 10px;
+    color: purple;
+    width: 3em;
+    border-style:ridge;
+    border-color: aqua;
+    border-width: 10px;
+    border-radius: 5px;
+}
+
+ol{
+    list-style:circle;
+}
+
+footer{
+    margin-top: 50px;
+    color:plum;
+}
+
+table{ 
+    border-collapse: collapse; 
+    border: 2px solid black; 
+    } 
+th, td { 
+    border: 1px solid orange; 
+    padding: 8px; 
+    text-align: center;
 }
