@@ -10,8 +10,15 @@
  */
 function variables() {
   // Declares a variable where the value cannot be changed
+  const ALWAYS_THE_SAME = 4
+  console.log(`The value in ALWAYS_THE_SAME is: ${ALWAYS_THE_SAME}`);
   // Declares a variable those value can be changed
+  let newString = "yay"
+  console.log(`The value in newString is: ${newString}`);
   // Declares a variable that will always be an array
+  let newArray = [3, "yes", 7, false]
+  console.log(newArray);
+  console.table(newArray);
 }
 
 /**
@@ -74,10 +81,11 @@ function objects() {
   };
 
   // Log the object
-
+  console.log(person)
   // Log the first and last name
-
+  console.log(`The person's firstName is: ${person.firstName} and their lastName is: ${person.lastName}`)
   // Log each employee
+  console.log(`The employees are ${person.employees}`)
 }
 
 /*
