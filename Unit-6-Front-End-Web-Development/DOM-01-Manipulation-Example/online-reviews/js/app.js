@@ -81,7 +81,7 @@ function displayReviews() {
  */
 function addReviewer(parent, name) {
 const reviewer = document.createElement('h4');  // Create an h4 element
-reviewer.innerText = productName;               // assign the productproductName to the h4 tag
+reviewer.innerText = name;               // assign the productproductName to the h4 tag
 parent.appendChild(reviewer);                   // add the reviewer as a child to the parent
 }
 
