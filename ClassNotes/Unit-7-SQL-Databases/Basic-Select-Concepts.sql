@@ -42,3 +42,16 @@
 -- The DISTINCT ON(columns/expression) clause on a SELECT removes duplicate values from the result
 -- based on the all columns/expression inside the parentheses that follow (Postgres extension)
 ------------------------------------------------------------------------------------------------------
+select * from gambler;
+
+select birth_date,gambler_name 
+from gambler 
+where gambler_name = '';
+
+select birth_date,gambler_name 
+from gambler 
+where gambler_name = 'S.Q. Elle';
+
+select birth_date,gambler_name 
+from gambler 
+where gambler_name Lke '%Q%';
