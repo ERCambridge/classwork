@@ -1,9 +1,11 @@
 --
 -- This SQL uses the vegas database 
 --
--- show the gambler_name and casinos and locations at which they are hosted
---
--- we need data from gambler table (gambler_name) and host table (casino_name and location)
+-- show the gambler_name, casino_name and  the type of room they stay in 
+
+-- we need data from
+--gambler table (gambler_name) 
+--host table (casino_name, room_type )
 --
 -- Whenever data is required in the result from more than one table use a join
 --
@@ -40,14 +42,63 @@
 ----------------------------------------------------------------------------------------
 -- Classic Syntax join
 ----------------------------------------------------------------------------------------
-
+select gambler_name
+	,casino_name
+	,room_type
+from gambler, host
+where gambler.id = host.id 
 ----------------------------------------------------------------------------------------
 -- Modern Syntax join
 ----------------------------------------------------------------------------------------                                            
-                
+select gambler_name
+	,casino_name
+	,room_type
+from gambler
+inner join host on gambler.id = host.id 
                    
                    
-                   
+ -- show the gambler_name, casino_name and  the type of room they stay in and location
+
+-- we need data from
+--gambler table (gambler_name) 
+--host table (casino_name, room_type )  
+-- casino table (location)
+
+----------------------------------------------------------------------------------------
+-- Classic Syntax join
+----------------------------------------------------------------------------------------
+select gambler_name
+	,host.casino_name
+	,location
+	,room_type
+from gambler, host, casino
+where gambler.id = host.id 
+and host.casino_name = casino.casino_name
+----------------------------------------------------------------------------------------
+-- Modern Syntax join
+----------------------------------------------------------------------------------------                                            
+select gambler_name
+	,host.casino_name
+	,location
+	,room_type
+from gambler
+inner join host 
+on gambler.id = host.id 
+inner join casino 
+on casino.casino_name = host.casino_name
+              
+		
+-- a correlation name maybe be assigned to a table to make it easier to reference in the sql 
+-- to code a correlation name add it after the table name and can be used to reference the table 
+select gambler_name
+	,h.casino_name
+	,location
+	,room_type
+from gambler g -- correlation name
+inner join host h
+on g.id = h.id 
+inner join casino 
+on casino.casino_name = h.casino_name
                    
                                              
                                              

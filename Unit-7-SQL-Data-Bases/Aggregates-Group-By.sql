@@ -16,7 +16,10 @@
 --    ORDER BY ASC      -- Ascending Sequence (low-high)
 --    ORDER BY DESC     -- Descending Sequence (high-low)
 
-
+-- List gamblers in order of salary from high to low
+select*
+from gambler
+order by monthly_salary desc 
 
 
 --------------------------------------------------------------------------------------------------------
@@ -26,15 +29,24 @@
 --
 -- TOP n   - Limit the number of rows in the result - always goes after the SELECT - before the first column 
 --
---
+-- List the 2 biggest casinos
+select top 2 * -- when using top an order by is usually needed to sort by the biggest value you want
+from casino 
+order by size desc
+
+-- List the 2 samllest casinos
+select top 2 * -- when using top an order by is usually needed to sort by the biggest value you want
+from casino 
+order by size asc
 --------------------------------------------------------------------------------------------------------
 -- Concatenating values (like + in Java with Strings)
 --
 -- the concat operator (+) may be used to concatenate character (string) values in a result
 -- (both sides of the + must be strings
 --
-
-
+-- show the casino and it's location in one column with a comma between 
+select trim(casino_name) + ', ' + trim(location) as 'casino'
+from casino
 
 --------------------------------------------------------------------------------------------------------
 -- Aggregate functions - produce one row in result for each group specified no matter how many rows are in the result
@@ -65,8 +77,14 @@
 --
 -- COUNT() is applied to rows in the result (not columns)
 --
---
+-- How many gamblers in gambler table	
+select count(*) as ' Number of gamblers' 
+from gambler
 
+select max(monthly_salary) as 'Highest'
+	,min(monthly_salary) as 'Lowest'
+	,avg(monthly_salary) as 'Average'
+from gambler
 
 --------------------------------------------------------------------------------------------------------
 -- GROUP BY  - Specify the group to which the aggregate functions apply
@@ -76,7 +94,14 @@
 -- When using a GROUP BY the SELECT is limited to aggreggate functions or columns in the GROUP BY
 --
 --
-
+select location
+--	,owner causes an error because owner is not included in the group by 
+	,count(*) as '# of Casinos'
+	,max(size) as 'Highest'
+	,min(size) as 'Lowest'
+	,avg(size) as 'Average'
+from casino
+group by location
 
 
 
