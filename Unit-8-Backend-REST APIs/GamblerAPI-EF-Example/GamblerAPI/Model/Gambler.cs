@@ -6,7 +6,7 @@ namespace GamblerAPI.Model
     public class Gambler
     {
         /***********************************************************************
-         * Gambler Data Model for use with Entity Fraework
+         * Gambler Data Model for use with Entity Framework
          * 
          * Describes data being transfered to and from the Server
          ***********************************************************************/
