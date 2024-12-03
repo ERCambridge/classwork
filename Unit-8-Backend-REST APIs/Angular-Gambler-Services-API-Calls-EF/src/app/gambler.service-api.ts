@@ -17,6 +17,8 @@ import { Injectable}   from '@angular/core'; // Access Angular Dependency Inject
 //               (usually only POST and PUT requests need headers) 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+import { GamblerInfo } from './gamblerInfo';
+
 // Tell Angular this service is Dependency Injectable
 @Injectable({
   providedIn: 'root'
@@ -66,7 +68,7 @@ export class GamblerService {
   //     (usually it JSON, but could be plain text, XML, image and others) 
   
   async addGambler(newGambler : any) : Promise<any> {      
-      //  console.table(newGambler)          // optional - verify new Gambler data
+        console.table(newGambler)          // optional - verify new Gambler data
       
       // Create a header to tell the server we are sending it JSON data with the request
       // 'application/json' is how you indicate JSON data
@@ -78,6 +80,6 @@ export class GamblerService {
                                        });
                                        
        // use http.post(API-URL, data-to-send, {header-object}).toPromise()                                
-       return this.http.post(this.gamblerInfoApi+"/gamblers/create", newGambler, {headers}).toPromise();
+       return this.http.post(this.gamblerInfoApi+"/Gamblers/create", newGambler, {headers}).toPromise();
              }
   } 
