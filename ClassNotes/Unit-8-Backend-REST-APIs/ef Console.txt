@@ -1,0 +1,1 @@
+Scaffold-DbContext 'Data Source=.\sqlexpress;Initial Catalog=CarDB; Integrated Security=SSPI;Encrypt=false;TrustServerCertificate=True;' Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
