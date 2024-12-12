@@ -34,7 +34,7 @@ namespace ConsumeAPIsC_.Services
 
             String dataReturnedPost = await thePostResponse.Content.ReadAsStringAsync();
 
-            return JsonSerializer.Deserialize<Movie>(dataReturnedPost);
+            return newMovie;
 
         }
 
@@ -58,7 +58,7 @@ namespace ConsumeAPIsC_.Services
 
             String dataReturnedPut = await thePutResponse.Content.ReadAsStringAsync();
 
-            return JsonSerializer.Deserialize<Movie>(dataReturnedPut);
+            return movie;
         }
     }
 }
