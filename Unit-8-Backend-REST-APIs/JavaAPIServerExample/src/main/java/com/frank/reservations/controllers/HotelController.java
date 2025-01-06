@@ -144,4 +144,10 @@ public class HotelController {
         return filteredHotels;
     }
 
+    @RequestMapping(path = "/reservations/{id}", method=RequestMethod.DELETE)
+    public void deleteReservation(int id) throws ReservationNotFoundException{
+        reservationDAO.delete(id);
+    }
+    
+
 }
