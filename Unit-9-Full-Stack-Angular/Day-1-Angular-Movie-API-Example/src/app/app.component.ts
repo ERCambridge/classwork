@@ -4,12 +4,13 @@ import { Component }       from '@angular/core';
 import { RouterOutlet }    from '@angular/router';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent }   from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({ // Metadata for the component - gives Angular some basic info
   selector: 'app-root',  // This is what is used to include this component 
                          //      on a page 
   standalone: true,      // Added in Angular 17 to allow components to ne independent
-  imports: [RouterOutlet, NavBarComponent, HomeComponent], // identifies things used
+  imports: [RouterOutlet, NavBarComponent, HomeComponent, HttpClientModule], // identifies things used
   templateUrl: './app.component.html',  // Where to find the html file
   styleUrl: './app.component.css'       //       and css file
 })

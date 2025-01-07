@@ -1,7 +1,7 @@
 import { CommonModule }  from '@angular/common';
-import { Component }     from '@angular/core';
+import { Component, OnInit }     from '@angular/core';
 import { MoviesInfo }    from '../moviesInfo';            // access the MoviesList interface
-import { MoviesService } from '../movies.service-memory'; // access the MoviesServices service
+import { MoviesService } from '../movies.service-api';// access the MoviesServices service
 import { RouterLink }    from '@angular/router';
 
 @Component({
@@ -11,13 +11,13 @@ import { RouterLink }    from '@angular/router';
   templateUrl: './movie-list.component.html',
   styleUrl: './movie-list.component.css'
 })
-export class MovieListComponent {
+export class MovieListComponent implements OnInit {
 
 // This will hold the data for the movies to be displayed
 // the data will come from a call to a service
 // it starts out as an empty array  
 //     var-name   : data-type - array of our interface
-public moviesList : MoviesInfo [] ; // This is an array of MoviesInfo objects
+public moviesList : any[] = [] ; // This is an array of MoviesInfo objects
 
 // constructor is used to initialize data in the component
 //
@@ -43,11 +43,14 @@ public moviesList : MoviesInfo [] ; // This is an array of MoviesInfo objects
 // The constructor for component is automatically run when the component is instantiated by Angular
 
 //           this movieService object is automatically instantiated and passed to this constructor                           
-constructor(private movieService  : MoviesService ) { 
-  // When this component is instantiated, we will call the service function to get our movies
-  // Call the service method to send back the current list of movies from the data source
-  this.moviesList = movieService.getMoviesList(); // Initialize our moviesList from service
-  //  1. movieService.getMoviesList() - go to the movieService and run the method getMoviesList
-  //  2. = - take with the method returns and assign it to (store it in)
-} //  3. this.moviesList is assigned the data from step 2
+constructor(private movieService  : MoviesService ) {} 
+
+async ngOnInit() {
+  // We have wait for the asynchronous process of retrieving the data before we gone
+  const theData  = await this.movieService.getMoviesList(); // Initialize our moviesList from service
+  // once the data comes back from the service, we can assign it to our array
+  this.moviesList = theData
+
+  //console.table(this.movieService) // optional - for testing and debugging only
+}
 }

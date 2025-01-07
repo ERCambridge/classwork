@@ -16,6 +16,7 @@ import { Injectable}   from '@angular/core'; // Access Angular Dependency Inject
 // HttpHeaders - handle all the "header info" an HTTP request might need
 //               (usually only POST and PUT requests need headers) 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
 
 // Tell Angular this service is Dependency Injectable
 @Injectable({
@@ -48,7 +49,8 @@ export class MoviesService {
       // .Promise() - Use a Promise for when the async class is done
       //
       //theMovies will hole the data from the API call    
-      const theMovies: any[] = await this.http.get<any>(this.movieInfoApi).toPromise()
+      const theMovies: any[] = await firstValueFrom(this.http.get<any>(this.movieInfoApi))
+                        //deprecated this.http.get<any>(this.movieInfoApi).toPromise() 
       
       this.listOfMovies = theMovies  // Assign the data from the API call to our array
       

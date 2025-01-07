@@ -13,6 +13,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MoviedbContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("moviedb")));
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy => 
+    {
+        policy.WithOrigins("hrrps://localhost:4200").AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+    });
+});
+
 var app = builder.Build();
 
 // Add DbContext for server and database used in the app
@@ -30,6 +38,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 
