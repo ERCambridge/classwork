@@ -66,25 +66,23 @@ export class MoviesService {
       // the Angular HttpCLient takes care of converting the data for you, if necessary
       // 'Content-Type' is the attribute where type of incoming data is specified
       // Use new HttpHeaders too create a JSON object with the attributes you want to send
-      const headers = new HttpHeaders ({
-        'Content-Type' : 'application/json'
-       });
+        const headers = new HttpHeaders ({
+          'Content-Type' : 'application/json'
+        });
        
       // use http.post(API-URL, data-to-send, {header-object})                               
-      return lastValueFrom(this.theServer.post(this.theServerURL+"/create", newMovie, {headers}));
-
+        return lastValueFrom(this.theServer.post(this.theServerURL+"/create", newMovie, {headers}));
       }
 
   // This method will delete a movie from our data source
-       async deleteMovie(aMovie : MoviesInfo) {
+      async deleteMovie(aMovie : MoviesInfo) {
  //       console.log("Got to delete movie")
  //       console.table(aMovie)
-       await lastValueFrom(this.theServer.delete(this.theServerURL + "/delete/"+aMovie.movieId))
+        await lastValueFrom(this.theServer.delete(this.theServerURL + "/delete/"+aMovie.movieId))
       }    
     
 // Note: this option has not been implemented in the component  
 // This method will update a movie
     async updateMovie(aMovie : MoviesInfo) {
-
     }    
 }
